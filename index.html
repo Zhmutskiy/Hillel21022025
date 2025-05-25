@@ -1,0 +1,57 @@
+<!-- index.html (исправленный) -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проект о Честере Беннингтоне</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Кнопка Linkin Park -->
+  <a href="https://www.linkinpark.com" target="_blank" class="lp-link-button">🌐 Linkin Park</a>
+
+  <!-- Музыка -->
+  <audio id="bg-music" autoplay loop>
+    <source src="video/Faint.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+
+  <!-- Кнопка музыки -->
+  <button class="audio-toggle" onclick="toggleAudio()">🔊 Музыка</button>
+
+  <!-- Заголовок -->
+  <main class="main">
+    Это главная страница проекта о Честере Беннингтоне.
+  </main>
+
+  <!-- Нижний блок: форма и кнопки -->
+  <div class="bottom-block">
+    <a href="pages/gallery.html" class="nav-button">📷 Галерея</a>
+
+    <div class="form-wrapper">
+      <h2>Форма связи</h2>
+      <form action="/submit" method="GET">
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" placeholder="Ваше имя" />
+
+        <label for="message">Текст уведомления</label>
+        <textarea id="message" name="message" rows="3" placeholder="Введите сообщение"></textarea>
+
+        <button class="Field" type="submit">Отослать</button>
+      </form>
+    </div>
+
+    <a href="pages/contact.html" class="nav-button">📞 Контакты</a>
+  </div>
+
+  <!-- Скрипт -->
+  <script>
+    function toggleAudio() {
+      const audio = document.getElementById("bg-music");
+      if (audio.paused) audio.play();
+      else audio.pause();
+    }
+  </script>
+</body>
+</html>
