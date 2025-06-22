@@ -1,4 +1,4 @@
-SELECT * FROM user_profiles WHERE name LIKE '%am%';
+select * from user_profiles where name like '%am%';
 
 select max(totalcost) from expenses where carid in (select id from cars where carbrandid in (select id from car_brands where title = 'audi'));
 
